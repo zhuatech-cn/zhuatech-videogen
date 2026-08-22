@@ -1,0 +1,7 @@
+# Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/
+spring.application.name: zhuatech-videogen
+server.port: ${SERVER_PORT:8080}
+zhuatech.video.provider: ${ZHUATECH_VIDEO_PROVIDER:local}
+zhuatech.video.base-url: ${ZHUATECH_VIDEO_BASE_URL:}
+zhuatech.video.model: ${ZHUATECH_VIDEO_MODEL:text-to-video-provider-model}
+zhuatech.video.api-key: ${ZHUATECH_VIDEO_API_KEY:}
