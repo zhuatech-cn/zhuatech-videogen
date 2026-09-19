@@ -7,8 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class VideoGenService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result plan(Request request) {
         int shotCount = Math.max(3, Math.min(12, (int) Math.ceil(request.durationSeconds() / 6.0)));
         List<Shot> shots = new ArrayList<>();
@@ -27,12 +33,21 @@ public class VideoGenService {
             "LOCAL_STORYBOARD_ENGINE");
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank @Size(max = 3000) String brief,
                           @Min(6) @Max(180) int durationSeconds,
                           @NotBlank String aspectRatio,
                           @NotBlank String visualStyle,
                           boolean brandAuthorized) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Shot(int sequence, double seconds, String purpose, String framing, String motion) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String status, int shotCount, String aspectRatio, List<Shot> storyboard,
                          List<String> checks, Map<String, Object> providerPayload, String executionMode) {}
 }
